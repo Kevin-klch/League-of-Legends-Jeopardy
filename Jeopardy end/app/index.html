@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jeopardy</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/da96e2eb02.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="bgmusic()">
+    <button class="music" onclick="endbg()"><i class="fa-solid fa-volume-xmark"></i></button>
+    <button class="music" onclick="bgmusic()"><i class="fa-solid fa-volume-high"></i></button>
+    <div class="container">
+        <div class="row" id="feld1">
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>Lore Sin</h3>
+                <br>
+                <div id="firstcol">
+                    <div class="frage" data-field="A1" style="display: none">
+                        <p class="headerPunktestand">Lore Sin - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wer ist der beste Freund von Gragas ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Jax</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="A2" style="display: none">
+                        <p class="headerPunktestand">Lore Sin - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Mit welchen beiden Champions ist Katarina verwandt ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Cassiopeia und Talon</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage gold" data-field="A3" style="display: none">
+                        <p class="headerPunktestand">Lore Sin - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wer tötete Kalista ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Hecarim</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="A4" style="display: none">
+                        <p class="headerPunktestand">Lore Sin - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wer tötete Vayne's Eltern ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Evelynn</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="A5" style="display: none">
+                        <p class="headerPunktestand">Lore Sin - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Nenne 5 Liebesbeziehungen aus League außer Ashe/Tryndamere ,
+                            Lucian/Senna und Rakan/Xayah</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">- Garen/Katarina<br>
+                            - Zoe/Ezreal<br>
+                            - Taric/Ezreal<br>
+                            - Rumble/Tristana<br>
+                            - Akali/Kayn<br>
+                            - Neeko/Nidalee<br>
+                            - Yone/Lillia<br>
+                            - Mundo/Vayne</p>
+                    </div> <!-- Textfrage -->
+                </div>
+
+                <div id="secondcol">
+                    <div class="frage gold" data-field="B1" style="display: none">
+                        <p class="headerPunktestand">Noch nie gesehen - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Splashart ?</p>
+                        <img src="/Questions etc/Jinx-small.png" class="splash zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="loesung">
+                            <img src="/Questions etc/Jinx.png" class="splash zoom">
+                            <img src="/Questions etc/Jinx-Original.jpg" class="splash zoom">
+                        </p>
+                    </div> <!-- Splashartfrage -->
+
+                    <div class="frage" data-field="B2" style="display: none">
+                        <p class="headerPunktestand">Noch nie gesehen - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Splashart ?</p>
+                        <img src="/Questions etc/Hecarim-small.png" class="splash zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="loesung">
+                            <img src="/Questions etc/Hecarim.png" class="splash zoom">
+                            <img src="/Questions etc/Hecarim-Original.jpg" class="splash zoom">
+                        </p>
+                    </div> <!-- Splashartfrage -->
+
+                    <div class="frage" data-field="B3" style="display: none">
+                        <p class="headerPunktestand">Noch nie gesehen - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Splashart ?</p>
+                        <img src="/Questions etc/Quinn-small.png" class="splash zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="loesung">
+                            <img src="/Questions etc/Quinn.png" class="splash zoom">
+                            <img src="/Questions etc/Quinn-Original.jpg" class="splash zoom">
+                        </p>
+                    </div> <!-- Splashartfrage -->
+
+                    <div class="frage" data-field="B4" style="display: none">
+                        <p class="headerPunktestand">Noch nie gesehen - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Splashart ?</p>
+                        <img src="/Questions etc/Neeko-small.png" class="splash zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="loesung">
+                            <img src="/Questions etc/Neeko.png" class="splash zoom">
+                            <img src="/Questions etc/Neeko-Original.jpg" class="splash zoom">
+                        </p>
+                    </div> <!-- Splashartfrage -->
+
+                    <div class="frage" data-field="B5" style="display: none">
+                        <p class="headerPunktestand">Noch nie gesehen - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Splashart ?</p>
+                        <img src="/Questions etc/Ezreal-small.png" class="splash zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="loesung">
+                            <img src="/Questions etc/Ezreal.png" class="splash zoom">
+                            <img src="/Questions etc/Ezreal-Original.webp" class="splash zoom">
+                        </p>
+                    </div> <!-- Splashartfrage -->
+                </div>
+
+                <div id="thirdcol">
+                    <div class="frage" data-field="C1" style="display: none">
+                        <p class="headerPunktestand">Too broken - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Welchen Champ suchen wir ?</p>
+                        <div class="abilityGuess" data-field="ability1">Die Geschwindigkeit der Ability scaled mit MS
+                        </div>
+                        <div class="abilityGuess" data-field="ability2">Die Ability hat eine Cast Time von 0.25 Sekunden
+                            und schießt ein Projektil</div>
+                        <div class="abilityGuess" data-field="ability3">Bei erfolgreichem fangen des Projektils gibt es
+                            eine CD Reduction von 40%</div>
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Gnar Q<img src="/Questions etc/Gnar-Q.webp"
+                                class="ability  zoom"></p>
+                    </div>
+
+                    <div class="frage" data-field="C2" style="display: none">
+                        <p class="headerPunktestand">Too broken - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Welchen Champ suchen wir ?</p>
+                        <div class="abilityGuess" data-field="ability1">Die Passive erhöht die Rüstung und Magic
+                            Resistance für die Dauer des Spells</div>
+                        <div class="abilityGuess" data-field="ability2">Die Ability gibt einem 2 Sekunden 40% MS</div>
+                        <div class="abilityGuess" data-field="ability3">Die Ability KANN Gegner knockupen, stunnen und
+                            grounden</div>
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Poppy W<img src="/Questions etc/Poppy-W.webp"
+                                class="ability zoom"></p>
+                    </div>
+
+                    <div class="frage" data-field="C3" style="display: none">
+                        <p class="headerPunktestand">Too broken - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Welchen Champ suchen wir ?</p>
+                        <div class="abilityGuess" data-field="ability1">Die Ability hat eine Cast Time von 0.3889
+                            Sekunden</div>
+                        <div class="abilityGuess" data-field="ability2">Der DMG scaled mit 2-3% Maximum Health und 40%
+                            AP</div>
+                        <div class="abilityGuess" data-field="ability3">Die Gegner werden gestunned und um 300 units
+                            geknockbacked</div>
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Maokai Q<img src="/Questions etc/Maokai-Q.webp"
+                                class="ability  zoom"></p>
+                    </div>
+
+                    <div class="frage gold" data-field="C4" style="display: none">
+                        <p class="headerPunktestand">Too broken - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Welchen Champ suchen wir ?</p>
+                        <div class="abilityGuess" data-field="ability1">Die Ability skaliert mit AP und hat eine
+                            Reichweite von 775 units</div>
+                        <div class="abilityGuess" data-field="ability2">Der Spell kann gerecasted werden, wenn dies
+                            nicht getan wird passiert dies automatisch</div>
+                        <div class="abilityGuess" data-field="ability3">Die Ability markiert Gegner bei erfolgreichem
+                            treffen</div>
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Irelia E<img src="/Questions etc/Irelia-E.webp"
+                                class="ability  zoom"></p>
+                    </div>
+
+                    <div class="frage" data-field="C5" style="display: none">
+                        <p class="headerPunktestand">Too broken - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Welchen Champ suchen wir ?</p>
+                        <div class="abilityGuess" data-field="ability1">Die Ability KANN healen</div>
+                        <div class="abilityGuess" data-field="ability2">Die Ability KANN cleansen</div>
+                        <div class="abilityGuess" data-field="ability3">Die Passive der Ability sammelt 50% des
+                            erhaltenen Schadens</div>
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Rengar W<img src="/Questions etc/Rengar-Q.webp"
+                                class="ability zoom"></p>
+                    </div>
+                </div>
+
+                <div class="fourthcol">
+                    <div class="frage" data-field="D1" style="display: none">
+                        <p class="headerPunktestand">Zitate - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Zitat ?</p>
+                        <p class="frageUnterschrift"><em><b>"Each bullet is a piece of my soul. Each shot is a piece
+                                    of me."</b></em></p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Jhin</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage gold" data-field="D2" style="display: none">
+                        <p class="headerPunktestand">Zitate - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Zitat ?</p>
+                        <p class="frageUnterschrift"><em><b>"Precision is the difference between a butcher and a
+                                    surgeon."</b></em></p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Camille</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="D3" style="display: none">
+                        <p class="headerPunktestand">Zitate - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Zitat ?</p>
+                        <p class="frageUnterschrift"><em><b>"A bird's eye view is the best advantage."</b></em></p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Quinn</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="D4" style="display: none">
+                        <p class="headerPunktestand">Zitate - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Zitat ?</p>
+                        <p class="frageUnterschrift"><em><b>"Ice, wind, spray of souls. Lay of seekers, the elder
+                                    toll. Locked for eons, a frozen key. The power lies inside me!"</b></em></p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Nunu & Willump</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="D5" style="display: none">
+                        <p class="headerPunktestand">Zitate - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört dieses Zitat ?</p>
+                        <p class="frageUnterschrift"><em><b>"For my next trick I’ll make their life bar
+                                    disappear."</b></em></p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">LeBlanc</p>
+                    </div> <!-- Textfrage -->
+                </div>
+
+                <div id="fifthcol">
+                    <div class="frage" data-field="E1" style="display: none">
+                        <p class="headerPunktestand">League of Cinematic - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">In dem Musikvideo von “Awaken” kämpft Sion gleichzeitig gegen
+                            wieviele andere Champs ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">5, Irelia - Karma - Akali - Yasuo - Kennen</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="E2" style="display: none">
+                        <p class="headerPunktestand">League of Cinematic - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">In dem Cinematic “The Call” tauchen wieviele verschiedene
+                            Champions auf ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">8, Kaisa - Leona - Olaf - Ornn - Pantheon - RekSai -
+                            Sejuani - Taliyah - Volibear/p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="E3" style="display: none">
+                        <p class="headerPunktestand">League of Cinematic - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Nenne eins der beiden Teams aus “A New Dawn” Toleranz +-1</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">- Graves, Rengar, Ahri, Jax, Leona <br>- Darius,
+                            Draven, Katarina, Nautilus, Zyra</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="E4" style="display: none">
+                        <p class="headerPunktestand">League of Cinematic - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">In dem Cinematic “A Twist of Fate” werden 5 Kämpfe ausgetragen,
+                            nenne 4</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">- TF vs Fiddle<br>
+                            - Ryze vs Noc<br>
+                            - Garen vs Kata<br>
+                            - Garen vs Trynda<br>
+                            - Trynda vs Annie</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage gold" data-field="E5" style="display: none">
+                        <p class="headerPunktestand">League of Cinematic - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">In dem Cinematic “Warrior” werden viele Kämpf ausgetragen. Wie
+                            oft wurde während des Videos geulted ? Toleranz +-1</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">- 8<br>
+                            - Sylas klaut Garens<br>
+                            - Kaisa ulted aufs podest<br>
+                            - Urgot ulted Vi<br>
+                            - Lux ulted<br>
+                            - Cait ulted Urgot<br>
+                            - Vi ulted Urgot<br>
+                            - Ezreal ulted Voidlings<br>
+                            - Galio ulted Lux und Garen</p>
+                    </div> <!-- Textfrage -->
+                </div>
+
+                <!--                 <div class="frage" data-field="E1" style="display: none">
+                    <p class="headerPunktestand">League of Cinematics - 200</p>
+                    <p class="frageÜberschrift">Frage:
+                    <p>
+                    <p class="frageUnterschrift">Welchen Champ suchen wir ?</p>
+                    <div class="abilityGuess" data-field="ability1">Tipp Nummer 1</div>
+                    <div class="abilityGuess" data-field="ability2">Tipp Nummer 2</div>
+                    <div class="abilityGuess" data-field="ability3">Tipp Nummer 3</div>
+                    <p class="frageÜberschrift">Antwort:</p>
+                    <p class="frageUnterschrift loesung">Champion</p>
+                </div> -->
+                <!-- abilityGuess -->
+
+                <!--                 <div class="frage" data-field="A2" style="display: none">
+                    <p class="headerPunktestand">Lore Sin - 300</p>
+                    <p class="frageÜberschrift">Frage:
+                    <p>
+                    <p class="frageUnterschrift">Aus welchem Jahr stammt dieser Song ?</p>
+                    <div class="audio-container">
+                        <audio controls>
+                            <source src="A2.mp3" id="A2Audio" type="audio/ogg">
+                        </audio>
+                    </div>
+                    <p class="frageÜberschrift">Antwort:</p>
+                    <p class="frageUnterschrift loesung">2017</p>
+                </div> <-- Audiofrage 
+            
+                                <div class="frage gold" data-field="B1" style="display: none">
+                        <p class="headerPunktestand">Arcane - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wie latete der Spitzname von VI für Caitlyn ?</p>
+                        <img src="/Questions etc/Sona_Ausschnitt.png" class="splash zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <img src="/Questions etc/Sona.jpg" class="splash zoom loesung">
+                    </div> Splashartfrage -->
+
+                <button class="buttonPoint" id="A1">200</button>
+                <button class="buttonPoint" id="A2">300</button>
+                <button class="buttonPoint" id="A3">400</button>
+                <button class="buttonPoint" id="A4">500</button>
+                <button class="buttonPoint" id="A5">600</button>
+            </div>
+
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>Noch nie gesehen</h3>
+                <button class="buttonPoint" id="B1">200</button>
+                <button class="buttonPoint" id="B2">300</button>
+                <button class="buttonPoint" id="B3">400</button>
+                <button class="buttonPoint" id="B4">500</button>
+                <button class="buttonPoint" id="B5">600</button>
+            </div>
+
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>Too broken</h3>
+                <br>
+                <button class="buttonPoint" id="C1">200</button>
+                <button class="buttonPoint" id="C2">300</button>
+                <button class="buttonPoint" id="C3">400</button>
+                <button class="buttonPoint" id="C4">500</button>
+                <button class="buttonPoint" id="C5">600</button>
+            </div>
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>Zitate</h3>
+                <br>
+                <button class="buttonPoint" id="D1">200</button>
+                <button class="buttonPoint" id="D2">300</button>
+                <button class="buttonPoint" id="D3">400</button>
+                <button class="buttonPoint" id="D4">500</button>
+                <button class="buttonPoint" id="D5">600</button>
+            </div>
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>League of Cinematics</h3>
+                <button class="buttonPoint" id="E1">200</button>
+                <button class="buttonPoint" id="E2">300</button>
+                <button class="buttonPoint" id="E3">400</button>
+                <button class="buttonPoint" id="E4">500</button>
+                <button class="buttonPoint" id="E5">600</button>
+            </div>
+
+            <div class="col-2 player">
+                <div class="name" data-field="name1"><img src="../cosmetic/Marlon.png" class="nameImage"></div>
+                <div class="inputField" data-field="input1">
+                    <p class="blur unselectable" id="input1"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer1">0</p>
+
+                <div class="name" data-field="name2"><img src="../cosmetic/Marc.png" class="nameImage"></div>
+                <div class="inputField" data-field="input2">
+                    <p class="blur unselectable" id="input2"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer2">0</p>
+
+                <div class="name" data-field="name3"><img src="../cosmetic/Erik.png" class="nameImage"></div>
+                <div class="inputField" data-field="input3">
+                    <p class="blur unselectable" id="input3"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer3">0</p>
+            </div>
+            <div class="col-2 player">
+                <div class="name" data-field="name4"><img src="../cosmetic/Jan.png" class="nameImage"></div>
+                <div class="inputField" data-field="input4">
+                    <p class="blur unselectable" id="input4"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer4">0</p>
+
+                <div class="name" data-field="name5"><img src="../cosmetic/Tom.png" class="nameImage"></div>
+                <div class="inputField" data-field="input5">
+                    <p class="blur unselectable" id="input5"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer5">0</p>
+
+                <div class="name" data-field="name6"><img src="../cosmetic/Merlin.png" class="nameImage"></div>
+                <div class="inputField" data-field="input6">
+                    <p class="blur unselectable" id="input6"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer6">0</p>
+            </div>
+        </div>
+
+        <div class="row" id="feld2">
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>Allgemeinwissen</h3>
+                <br>
+                <div id="firstcol">
+                    <div class="frage" data-field="A1" style="display: none">
+                        <p class="headerPunktestand">Allgemeinwissen - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wie viele Musik-Bands gibt es in League?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">3, K/DA - True Damage - Pentakill</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="A2" style="display: none">
+                        <p class="headerPunktestand">Allgemeinwissen - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Bei einem normalen Jungle clear werden wieviele verchiedene Monster
+                            getötet ohne Scuttle?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">22, 10 Krugs - 1 Red Buff - 6 Raptors - 3 Wölfe - 1 Blue
+                            Buff - 1 Grump</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="A3" style="display: none">
+                        <p class="headerPunktestand">Allgemeinwissen - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wieviel kostet das Item “Zhonya's Hourglass” (stand 20. Oktober)
+                        </p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">3.000 Gold</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage gold" data-field="A4" style="display: none">
+                        <p class="headerPunktestand">Allgemeinwissen - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Welcher war der erste weibliche Champ der nach den OG17
+                            veröffentlicht wurde</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Evelynn</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="A5" style="display: none">
+                        <p class="headerPunktestand">Allgemeinwissen - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wieviele “Götter” Champs gibt es in League of Legends.</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung"> 17<br>
+                            God-Warriors: Azir - Nasus - Renekton - Xerath<br>
+                            Aspect Hosts: Diana - Leona - Pantheon - Taric - Zoe<br>
+                            Freljordian Demo-gods: Anivia - Ornn - Volibear<br>
+                            Other Spirit Gods: Kindred - Janna<br>
+                            Celestials: Bard - Aurelion Sol - Soraka
+                    </div> <!-- Textfrage -->
+                </div>
+
+                <div id="secondcol">
+                    <div class="frage" data-field="B1" style="display: none">
+                        <p class="headerPunktestand">Arcane - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wie lautet der Spitzname von VI für Caitlyn ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Cupcake</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="B2" style="display: none">
+                        <p class="headerPunktestand">Arcane - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Nenne 3 Songs aus der Serie Arcane</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Playground<br>
+                            Our Love<br>
+                            Goodbye<br>
+                            Dirty Little Animals
+                            Enemy<br>
+                            Guns for Hire<br>
+                            Misfit Toys<br>
+                            Dynasties and Dystopia<br>
+                            Snakes<br>
+                            When Everything Went Wrong<br>
+                            What Could Have Been
+                        </p>
+                    </div> <!-- Splashartfrage -->
+
+                    <div class="frage" data-field="B3" style="display: none">
+                        <p class="headerPunktestand">Arcane - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wieviele Personen sitzen im Rat, ohne Jayce</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">6</p>
+                    </div> <!-- Splashartfrage -->
+
+                    <div class="frage" data-field="B4" style="display: none">
+                        <p class="headerPunktestand">Arcane - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wie lautet der Titel von Silco</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">The Eye of Zaun<br>
+                            Das Auge von Zaun</p>
+                    </div> <!-- Splashartfrage -->
+
+                    <div class="frage" data-field="B5" style="display: none">
+                        <p class="headerPunktestand">Arcane - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wie lautet der Name der Familie welche Jayce's Forschungen
+                            unterstützt ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Kiramman</p>
+                    </div> <!-- Splashartfrage -->
+                </div>
+
+                <div id="thirdcol">
+                    <div class="frage" data-field="C1" style="display: none">
+                        <p class="headerPunktestand">Ability Icon Raten - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört diese Ability und welche ist es ?</p>
+                        <img src="/Questions etc/Ornn.webp" class="ability zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Ornn Passive</p>
+                    </div> <!-- Abilityfrage -->
+
+                    <div class="frage" data-field="C2" style="display: none">
+                        <p class="headerPunktestand">Ability Icon Raten - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört diese Ability und welche ist es ?</p>
+                        <img src="/Questions etc/Singed.webp" class="ability zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Singed E</p>
+                    </div> <!-- Abilityfrage -->
+
+                    <div class="frage" data-field="C3" style="display: none">
+                        <p class="headerPunktestand">Ability Icon Raten - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört diese Ability und welche ist es ?</p>
+                        <img src="/Questions etc/Karma.webp" class="ability zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Karma Q</p>
+                    </div> <!-- Abilityfrage -->
+
+                    <div class="frage" data-field="C4" style="display: none">
+                        <p class="headerPunktestand">Ability Icon Raten - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört diese Ability und welche ist es ?</p>
+                        <img src="/Questions etc/Malzahar.webp" class="ability zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Malzahar E</p>
+                    </div> <!-- Abilityfrage -->
+
+                    <div class="frage gold" data-field="C5" style="display: none">
+                        <p class="headerPunktestand">Ability Icon Raten - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wem gehört diese Ability und welche ist es ?</p>
+                        <img src="/Questions etc/Nunu.webp" class="ability zoom">
+                        <p class="frageÜberschrift">Antwort:</p>
+                        <p class="frageUnterschrift loesung">Nunu & Willump R</p>
+                    </div> <!-- Abilityfrage -->
+                </div>
+
+                <div class="fourthcol">
+                    <div class="frage" data-field="D1" style="display: none">
+                        <p class="headerPunktestand">Good old days - 200</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">In welchem Jahr hat das Rift sein Visual Update erhalten ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">2014</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="D2" style="display: none">
+                        <p class="headerPunktestand">Good old days - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Wie heißt dieses Item ?</p>
+                        <img src="/Questions etc/PS.webp" class="ability zoom">
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Philosopher's Stone</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage gold" data-field="D3" style="display: none">
+                        <p class="headerPunktestand">Good old days - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Bevor Zhonyas zu einer Sanduhr wurde war es was ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Ein Ring</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="D4" style="display: none">
+                        <p class="headerPunktestand">Good old days - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Was tat die Ryze Ult beim ersten release ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Ryze channels immense arcane power, he gains spell vamp and
+                            all of his spells deal area of effect damage</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="D5" style="display: none">
+                        <p class="headerPunktestand">Good old days - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Welcher Champ wurde als aller erstes gereworked ?</p>
+                        <button class="frageÜberschrift link">Antwort:</button>
+                        <p class="frageUnterschrift loesung">Kayle</p>
+                    </div> <!-- Textfrage -->
+                </div>
+
+                <div id="fifthcol">
+                    <div class="frage" data-field="E1" style="display: none">
+                        <p class="headerPunktestand">Und jetzt alle - 200</p>
+                        <p class="frageÜberschrift">Themenrunde:
+                        <p>
+                        <p class="frageUnterschrift">Nenne Champions welche regulär auf der Toplane gespielt werden</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage gold" data-field="E2" style="display: none">
+                        <p class="headerPunktestand">Und jetzt alle - 300</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Nennt Mythic Items</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="E3" style="display: none">
+                        <p class="headerPunktestand">Und jetzt alle - 400</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Nennt die OG 17</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="E4" style="display: none">
+                        <p class="headerPunktestand">Und jetzt alle - 500</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Nennt Champs welche einen Knock Up besitzen</p>
+                    </div> <!-- Textfrage -->
+
+                    <div class="frage" data-field="E5" style="display: none">
+                        <p class="headerPunktestand">Und jetzt alle - 600</p>
+                        <p class="frageÜberschrift">Frage:
+                        <p>
+                        <p class="frageUnterschrift">Nennt Champs ohne irgendeine AP Ratio</p>
+                    </div> <!-- Textfrage -->
+                </div>
+
+                <!--                 <div class="frage" data-field="A2" style="display: none">
+                    <p class="headerPunktestand">Lore Sin - 300</p>
+                    <p class="frageÜberschrift">Frage:
+                    <p>
+                    <p class="frageUnterschrift">Aus welchem Jahr stammt dieser Song ?</p>
+                    <div class="audio-container">
+                        <audio controls>
+                            <source src="A2.mp3" id="A2Audio" type="audio/ogg">
+                        </audio>
+                    </div>
+                    <p class="frageÜberschrift">Antwort:</p>
+                    <p class="frageUnterschrift loesung">2017</p>
+                </div> <-- Audiofrage -->
+
+                <button class="buttonPoint" id="A1">200</button>
+                <button class="buttonPoint" id="A2">300</button>
+                <button class="buttonPoint" id="A3">400</button>
+                <button class="buttonPoint" id="A4">500</button>
+                <button class="buttonPoint" id="A5">600</button>
+            </div>
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>Arcane</h3>
+                <br>
+                <button class="buttonPoint" id="B1">200</button>
+                <button class="buttonPoint" id="B2">300</button>
+                <button class="buttonPoint" id="B3">400</button>
+                <button class="buttonPoint" id="B4">500</button>
+                <button class="buttonPoint" id="B5">600</button>
+            </div>
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>Ability Icon Raten</h3>
+                <button class="buttonPoint" id="C1">200</button>
+                <button class="buttonPoint" id="C2">300</button>
+                <button class="buttonPoint" id="C3">400</button>
+                <button class="buttonPoint" id="C4">500</button>
+                <button class="buttonPoint" id="C5">600</button>
+            </div>
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>Good old days</h3>
+                <br>
+                <button class="buttonPoint" id="D1">200</button>
+                <button class="buttonPoint" id="D2">300</button>
+                <button class="buttonPoint" id="D3">400</button>
+                <button class="buttonPoint" id="D4">500</button>
+                <button class="buttonPoint" id="D5">600</button>
+            </div>
+            <div class="col-1" style="width: 12.499999995%">
+                <h3>Und jetzt alle</h3>
+                <br>
+                <button class="buttonPoint" id="E1">200</button>
+                <button class="buttonPoint" id="E2">300</button>
+                <button class="buttonPoint" id="E3">400</button>
+                <button class="buttonPoint" id="E4">500</button>
+                <button class="buttonPoint" id="E5">600</button>
+            </div>
+
+
+            <div class="col-2 player">
+                <div class="name" data-field="name1"><img src="/cosmetic/Marlon.png" class="nameImage"></div>
+                <div class="inputField" data-field="input1">
+                    <p class="blur unselectable" id="input1"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer1">0</p>
+
+                <div class="name" data-field="name2"><img src="/cosmetic/Marc.png" class="nameImage"></div>
+                <div class="inputField" data-field="input2">
+                    <p class="blur unselectable" id="input2"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer2">0</p>
+
+                <div class="name" data-field="name3"><img src="/cosmetic/Erik.png" class="nameImage"></div>
+                <div class="inputField" data-field="input3">
+                    <p class="blur unselectable" id="input3"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer3">0</p>
+            </div>
+            <div class="col-2 player">
+                <div class="name" data-field="name4"><img src="/cosmetic/Jan.png" class="nameImage"></div>
+                <div class="inputField" data-field="input4">
+                    <p class="blur unselectable" id="input4"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer4">0</p>
+
+                <div class="name" data-field="name5"><img src="/cosmetic/Tom.png" class="nameImage"></div>
+                <div class="inputField" data-field="input5">
+                    <p class="blur unselectable" id="input5"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer5">0</p>
+
+                <div class="name" data-field="name6"><img src="/cosmetic/Merlin.png" class="nameImage"></div>
+                <div class="inputField" data-field="input6">
+                    <p class="blur unselectable" id="input6"></p>
+                </div>
+                <p class="Punktestand" data-field="pointsPlayer6">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.3/socket.io.min.js"
+        integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

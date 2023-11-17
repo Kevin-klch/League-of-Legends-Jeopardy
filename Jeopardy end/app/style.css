@@ -1,0 +1,290 @@
+@font-face {
+    font-family: Alatsi;
+    src: url(/cosmetic/Alatsi-Regular.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(/cosmetic/Inter-SemiBold.otf);
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html,
+body {
+    background-color: #154360 !important;
+    background: url(../cosmetic/Sprinkle\ \(5\).svg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-size: 20px !important;
+    font-family: Inter;
+}
+
+.buttonPoint {
+    margin-bottom: 10px;
+    width: 150px;
+    height: 118px;
+    border-radius: 8px;
+    background: #333333;
+    border: none;
+    font-family: Alatsi;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #FFD66C;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);
+}
+
+.disabledPoint{
+    margin-bottom: 10px;
+    width: 150px;
+    height: 118px;
+    border-radius: 8px;
+    background: #0e0e0e;
+    border: none;
+    font-family: Alatsi;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #756231;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);
+}
+
+.disabledPointGold{
+    margin-bottom: 10px;
+    width: 150px;
+    height: 118px;
+    border-radius: 8px;
+    background: #756231;
+    border: none;
+    font-family: Alatsi;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);
+}
+
+.name {
+    width: 200px;
+    height: 50px;
+    border: 3px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+.nameImage {
+    position: absolute;
+    height: 49px;
+}
+
+.inputField {
+    margin-top: 10px;
+    width: 200px;
+    height: 120px !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    font-family: Inter;
+    font-size: 15px;
+    color: white;
+    padding: 5px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.buzzerName{
+    width: 200px;
+    height: 50px;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+}
+
+.buzzerInput{
+    margin-top: 10px;
+    width: 200px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+}
+
+.blur{
+    filter: blur(5px);
+}
+
+.Punktestand {
+    width: 200px;
+    text-align: center;
+    color: #FFD66C;
+    font-size: 25px;
+    font-size: bold;
+    font-family: Alatsi;
+    letter-spacing: 2px;
+}
+
+.frage {
+    /* display: none; */
+    position: absolute;
+    width: 810px;
+    height: 800px;
+    background-color: rgb(22, 22, 22);
+    border: 10px solid #333333;
+    border-radius: 8px;
+    box-shadow: 20px 20px 40px rgb(0, 0, 0, 0.25);
+    box-shadow: -20px -20px 40px rgb(0, 0, 0, 0.25);
+}
+
+.gold{
+    background-color: #ffb700;
+    color:#333333 !important;
+}
+
+.frageÜberschrift {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    font-family: Inter;
+    padding-top: 30px;
+    padding-top: 0;
+}
+
+.headerPunktestand {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: Inter;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.frageUnterschrift {
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    font-family: Inter;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.exit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: hsl(0, 0%, 10%);
+    font-family: Inter;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 10px 0 0 10px;
+    color: white;
+}
+
+.ability {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+.splash {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+.zoom {
+    transition: transform .2s;
+    /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(2);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.abilityGuess {
+    margin-right: 15px;
+    float: left;
+    height: 80px;
+    width: 807px;
+    color: #ff000000;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.audio-container {
+    display: none;
+}
+
+button.link {
+    background: none;
+    border: none;
+    width: 810px;
+}
+
+.loesung{
+    display: none;
+}
+
+.admin{
+    background-color: #FFD66C;
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Alatsi;
+    border: 2px solid #ffffff00;
+    border-radius: 8px;
+    margin: 2px;
+    width: 200px;
+}
+
+.blurOutSingle{
+    width: 25px;
+}
+
+.points{
+    background-color: #FFD66C;
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Alatsi;
+    border: 2px solid #ffffff00;
+    border-radius: 8px;
+    margin: 2px;
+    width: 41px;
+    height: 30px;
+}
+
+#feld2{
+    display: none;
+}
+
+#feld1{
+    display: flex;
+}
+
+.music{
+    height: 50px;
+    width: 50px;
+    background-color: #333333;
+    border: 0px;
+    border-radius: 50%;
+}
